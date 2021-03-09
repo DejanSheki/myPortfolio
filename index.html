@@ -72,6 +72,43 @@
             stroke-width: 2px;
             stroke-linecap: round;
         }
+        @keyframes preloadLogoMala {
+            0% {
+                stroke-dashoffset: 500;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes preloadLogoVelika {
+            0% {
+                stroke-dashoffset: 800;
+                fill-opacity: 0;
+            }
+            100% {
+                stroke-dashoffset: 0;
+                fill-opacity: 1;
+            }
+        }
+
+        @keyframes preloadOpacity {
+            0% {
+                fill-opacity: 0;
+            }
+            25% {
+                fill-opacity: 0;
+            }
+            50% {
+                fill-opacity: 0;
+            }
+            75% {
+                fill-opacity: 0;
+            }
+            100% {
+                fill-opacity: 1;
+            }
+        }
     </style>
     <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/style.css"></noscript>
