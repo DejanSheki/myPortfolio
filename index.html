@@ -33,7 +33,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--<link rel="stylesheet" href="css/style.css">-->
-        <style>
+    <style>
         .preload {
             display: flex;
             flex-wrap: wrap;
@@ -47,7 +47,7 @@
             height: 100%;
             background: #060c0f;
             z-index: 999;
-            transition: opacity 1s ease-in-out 4s;
+            transition: opacity 1s ease-in-out 3s;
         }
         
         .preload-finish {
@@ -58,7 +58,7 @@
         .preload-velika-crta {
             stroke-dasharray: 800;
             stroke-dashoffset: 800;
-            animation: preloadLogoVelika 3s ease-in forwards, preloadOpacity 4s ease-out forwards;
+            animation: preloadLogoVelika 2s ease-in forwards, preloadOpacity 3s ease-out forwards;
             stroke: #0073FF;
             stroke-width: 2px;
             stroke-linecap: round;
@@ -67,10 +67,42 @@
         .preload-mala-crta {
             stroke-dasharray: 500;
             stroke-dashoffset: 500;
-            animation: preloadLogoMala 3s ease-in forwards, preloadOpacity 4s ease-out forwards;
+            animation: preloadLogoMala 2s ease-in forwards, preloadOpacity 3s ease-out forwards;
             stroke: #0073FF;
             stroke-width: 2px;
             stroke-linecap: round;
+        }
+        
+        @keyframes preloadLogoMala {
+            0% {
+                stroke-dashoffset: 500;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        @keyframes preloadLogoVelika {
+            0% {
+                stroke-dashoffset: 800;
+                fill-opacity: 0;
+            }
+            100% {
+                stroke-dashoffset: 0;
+                fill-opacity: 1;
+            }
+        }
+        
+        @keyframes preloadOpacity {
+            0% {
+                fill-opacity: 0;
+            }
+            50% {
+                fill-opacity: 0;
+            }
+            100% {
+                fill-opacity: 1;
+            }
         }
     </style>
     <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -182,7 +214,6 @@
                 <p class="en">After successfully completing the PHP Web Development course, this was my first project to be uploaded to the server. I did everything from design, image processing and coding, to buying a domain name, hosting, and SEO optimization.
                 </p>
                 <p class="sr hide">Posle završenog kursa za PHP Web Developera, prvi projekat koji je postavljen na server. Rađeno je sve od nule: dizajn, obrada slika, kodiranje, kupovina domena i hostinga, postavljenje na server kao i SEO podešavanja. </p>
-                <br><br>
                 <span class="en">Technologies used &darr;</span>
                 <span class="sr hide">Korišćene tehnologije &darr;</span>
                 <div class="icons">
@@ -208,7 +239,7 @@
                 <h3 class="sr hide">Menjačnica Funta</h3>
                 <p class="en">My first commission job. Again, I was responsible for the design, image processing and coding, as well as buying the domain name, hosting, and uploading it to the server. The exchange rates are coming via API, processed through PHP, and
                     formed in a list. The effects are made without using the libraries.</p>
-                <p class="sr hide">Prvi ozbiljan posao, kao i kod predhodnog projekta, rađeno sve od dizajna do postavljanja na server. Podaci kursne liste se dobijaju preko API-ja, obrađuju kroz PHP i formiraju listu. Efekti su rađeni bez korišćenja biblioteka. </p><br><br>
+                <p class="sr hide">Prvi ozbiljan posao, kao i kod predhodnog projekta, rađeno sve od dizajna do postavljanja na server. Podaci kursne liste se dobijaju preko API-ja, obrađuju kroz PHP i formiraju listu. Efekti su rađeni bez korišćenja biblioteka. </p>
                 <span class="en">Technologies used &darr;</span>
                 <span class="sr hide">Korišćene tehnologije &darr;</span>
                 <div class="icons">
@@ -229,12 +260,31 @@
             </article>
             <article>
                 <div>
+                    <img src="img/gallery.jpg" loading="lazy" alt="Photo Gallery">
+                </div>
+                <h3>Photo Gallery</h3>
+                <p class="en">This project was part of the <a class="webcon" href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" target="_blank" rel="noreferrer">Dev Ed </a> online tutorials. We are using GSAP timelines for animations.</p>
+                <p class="sr hide">Vežba u okviru <a class="webcon" href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" target="_blank" rel="noreferrer">Dev Ed </a> online tutorijala. Koristili smo GSAP biblioteku za pokretanje animacija.</p>
+                <span class="en">Technologies used &darr;</span>
+                <span class="sr hide">Korišćene tehnologije &darr;</span>
+                <div class="icons">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3"></i>
+                    <i class="fab fa-js"></i>
+                </div>
+                <a class="en" href="http://gallery.dejanlukic.com" title="Go to website" target="_blank" rel="noreferrer">Go to website<i class="fas fa-external-link-alt"></i></a>
+                <a class="sr hide" href="http://gallery.dejanlukic.com" title="Poseti sajt" target="_blank" rel="noreferrer">Poseti sajt<i class="fas fa-external-link-alt"></i></a>
+            </article>
+        </div>
+        <div class="container hiden-container">
+            <article>
+                <div>
                     <img src="img/portfolio.jpg" loading="lazy" alt="Portfolio vezba">
                 </div>
                 <h3>Portfolio</h3>
                 <p class="en">This project was part of the <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> online workshop. First, a web page was designed in a Photoshop Document (PSD) and then converted to code using HTML,
                     to which I added some changes.</p>
-                <p class="sr hide">Vežba u okviru <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionice. Jedan od mnogih projekata u okviru radionice, rađeno iz PSD u HTML, uz sitne promene.</p><br><br>
+                <p class="sr hide">Vežba u okviru <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionice. Jedan od mnogih projekata u okviru radionice, rađeno iz PSD u HTML, uz sitne promene.</p>
                 <span class="en">Technologies used &darr;</span>
                 <span class="sr hide">Korišćene tehnologije &darr;</span>
                 <div class="icons">
@@ -249,15 +299,13 @@
                 <a class="en" href="https://dejansheki.github.io/Portfolio/" title="Go to website" target="_blank" rel="noreferrer">Go to website<i class="fas fa-external-link-alt"></i></a>
                 <a class="sr hide" href="https://dejansheki.github.io/Portfolio/" title="Poseti sajt" target="_blank" rel="noreferrer">Poseti sajt<i class="fas fa-external-link-alt"></i></a>
             </article>
-        </div>
-        <div class="container hiden-container">
             <article>
                 <div>
                     <img src="img/web.jpg" loading="lazy" alt="Busines">
                 </div>
                 <h3>Busines</h3>
                 <p class="en">Another project from the <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> online workshop, which I customized.</p>
-                <p class="sr hide">Jos jedna u nizu vežbi u okviru <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionica, uz poneku izmenu s moje strane.</p><br><br>
+                <p class="sr hide">Jos jedna u nizu vežbi u okviru <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionica, uz poneku izmenu s moje strane.</p>
                 <span class="en">Technologies used &darr;</span>
                 <span class="sr hide">Korišćene tehnologije &darr;</span>
                 <div class="icons">
@@ -278,7 +326,7 @@
                 </div>
                 <h3>House-works</h3>
                 <p class="en">Live coding during the <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> online workshop with the assistance of an experienced developer.</p>
-                <p class="sr hide">Kodiranje uživo na <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionici. Kopiranje templejta uz instrukcije iskusnog developera.</p><br><br>
+                <p class="sr hide">Kodiranje uživo na <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionici. Kopiranje templejta uz instrukcije iskusnog developera.</p>
                 <span class="en">Technologies used &darr;</span>
                 <span class="sr hide">Korišćene tehnologije &darr;</span>
                 <div class="icons">
@@ -295,7 +343,7 @@
                 </div>
                 <h3>Bloger</h3>
                 <p class="en">Live coding during the <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> online workshop with the assistance of an experienced developer.</p>
-                <p class="sr hide">Kodiranje uživo na <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionici, uz instrukcije iskusnog developera.</p><br><br>
+                <p class="sr hide">Kodiranje uživo na <a class="webcon" href="https://webcon.rs/" target="_blank" rel="noreferrer">Webcon </a> radionici, uz instrukcije iskusnog developera.</p>
                 <span class="en">Technologies used &darr;</span>
                 <span class="sr hide">Korišćene tehnologije &darr;</span>
                 <div class="icons">
@@ -555,10 +603,13 @@
             <article>
                 <div class="text">
                     <p class="en">My name is Dejan Lukić. I was born and raised in Belgrade, where I still live in. After 17 years spent working in a bank, mostly as a vault teller, I decided to take a turn and do something I am really interested in, in a field where
-                        I can progress and prosper.<br> For the last year and a half, I have been learning and acquiring new skills daily, by attending various courses and online workshops. It is never too late to rearrange life's priorities, take risks
-                        and tackle new challenges on your own.</p>
-                    <p class="sr hide">Moje ime je Dejan Lukić, rođen sam i živim u Beogradu. Posle 17 godina provedenih u banci, rešio sam da se bavim poslom koji me stvarno zanima, uz koji mogu svakodnevno da napredujem.<br> Poslednjih godinu ipo dana, učim i razvijam
-                        svoje veštine na dnevnoj bazi, uz mnogobrojne kurseve i radionice. Pravi sam primjer da nikad nikad kasno presložiti životne prioritete, odlučiti se za rizik i samostalno se uhvatiti u koštac s novim izazovima. </p>
+                        I can progress and prosper.</p>
+                    <p class="en"> For the last year and a half, I have been learning and acquiring new skills daily, by attending various courses and online workshops. It is never too late to rearrange life's priorities, take risks and tackle new challenges on your
+                        own.
+                    </p>
+                    <p class="sr hide">Moje ime je Dejan Lukić, rođen sam i živim u Beogradu. Posle 17 godina provedenih u banci, rešio sam da se bavim poslom koji me stvarno zanima, uz koji mogu svakodnevno da napredujem.</p>
+                    <p class="sr hide"> Poslednjih godinu ipo dana, učim i razvijam svoje veštine na dnevnoj bazi, uz mnogobrojne kurseve i radionice. Pravi sam primjer da nikad nikad kasno presložiti životne prioritete, odlučiti se za rizik i samostalno se uhvatiti u koštac
+                        s novim izazovima. </p>
                 </div>
                 <div class="image">
                     <img src="img/ja.jpg" loading="lazy" alt="Dejan Lukic">
@@ -595,6 +646,7 @@
         </div>
         <div class="iconsdiv">
             <a href="https://www.facebook.com/dejan.s.lukic" title="Facebook" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.linkedin.com/in/dejanwebdev/" title="Linkedin" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/dejan.s.lukic/" title="Instagram" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/DejanSheki" title="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github-square"></i></a>
             <a href="mailto:dejan.sheki.lukic@gmail.com" title="Mail"><i class="far fa-envelope"></i></a>

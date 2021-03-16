@@ -10,7 +10,7 @@
 }
 
 [data-theme=light] {
-  --primary-color: #586998;
+  --primary-color: #404d71;
   --font-color: #0c0c21;
   --bg-color: #eaeaea;
   --bg-color-2: #dbdee8;
@@ -88,81 +88,6 @@ a:hover {
   display: none !important;
 }
 
-/** preload **/
-.preload {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #060c0f;
-  z-index: 999;
-  transition: opacity 1s ease-in-out 4s;
-}
-
-.preload-finish {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.preload-velika-crta {
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
-  animation: preloadLogoVelika 3s ease-in forwards, preloadOpacity 4s ease-out forwards;
-  stroke: #0073FF;
-  stroke-width: 2px;
-  stroke-linecap: round;
-}
-
-.preload-mala-crta {
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  animation: preloadLogoMala 3s ease-in forwards, preloadOpacity 4s ease-out forwards;
-  stroke: #0073FF;
-  stroke-width: 2px;
-  stroke-linecap: round;
-}
-
-@keyframes preloadLogoMala {
-  0% {
-    stroke-dashoffset: 500;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes preloadLogoVelika {
-  0% {
-    stroke-dashoffset: 800;
-    fill-opacity: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-@keyframes preloadOpacity {
-  0% {
-    fill-opacity: 0;
-  }
-  25% {
-    fill-opacity: 0;
-  }
-  50% {
-    fill-opacity: 0;
-  }
-  75% {
-    fill-opacity: 0;
-  }
-  100% {
-    fill-opacity: 1;
-  }
-}
 /*** nav ***/
 .stickyAdd {
   padding: 20px 110px;
@@ -452,7 +377,7 @@ header {
 @media (max-width: 768px) {
   header {
     height: 68vh;
-    background-image: url(../img/headerxs.png);
+    background-image: url(../img/headerxs1.png);
   }
 }
 header .welcome-text {
@@ -646,7 +571,7 @@ header h2 {
 }
 .projects .container article span {
   align-self: flex-start;
-  margin-top: 15px;
+  margin-top: 45px;
 }
 .projects .container article a {
   border-bottom: none;
@@ -1047,7 +972,6 @@ header h2 {
   }
 }
 .profile .container article .image img {
-  border-radius: 50%;
   box-shadow: 0px 0px 0px 4px #0073FF;
   transition: box-shadow 0.3s linear;
   filter: grayscale(70%);
