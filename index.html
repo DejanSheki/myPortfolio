@@ -5,11 +5,14 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSE0L903E6"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-PSE0L903E6');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PSE0L903E6');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +45,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--<link rel="stylesheet" href="css/style.css">-->
-        <style>
+    <style>
         .preload {
             display: flex;
             flex-wrap: wrap;
@@ -81,43 +84,44 @@
             stroke-width: 2px;
             stroke-linecap: round;
         }
+        
         @keyframes preloadLogoMala {
-    0% {
-        stroke-dashoffset: 500;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-    
-    @keyframes preloadLogoVelika {
-        0% {
-            stroke-dashoffset: 800;
-            fill-opacity: 0;
+            0% {
+                stroke-dashoffset: 500;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
         }
-        100% {
-            stroke-dashoffset: 0;
-            fill-opacity: 1;
+        
+        @keyframes preloadLogoVelika {
+            0% {
+                stroke-dashoffset: 800;
+                fill-opacity: 0;
+            }
+            100% {
+                stroke-dashoffset: 0;
+                fill-opacity: 1;
+            }
         }
-    }
-    
-    @keyframes preloadOpacity {
-        0% {
-            fill-opacity: 0;
+        
+        @keyframes preloadOpacity {
+            0% {
+                fill-opacity: 0;
+            }
+            25% {
+                fill-opacity: 0;
+            }
+            50% {
+                fill-opacity: 0;
+            }
+            75% {
+                fill-opacity: 0;
+            }
+            100% {
+                fill-opacity: 1;
+            }
         }
-        25% {
-            fill-opacity: 0;
-        }
-        50% {
-            fill-opacity: 0;
-        }
-        75% {
-            fill-opacity: 0;
-        }
-        100% {
-            fill-opacity: 1;
-        }
-    }
     </style>
     <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/style.css"></noscript>
