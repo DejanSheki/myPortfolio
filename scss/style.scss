@@ -631,7 +631,7 @@ header {
     animation: languageEffect 1.5s forwards ease-out;
 }
 
-.drawline {
+.scrolled.drawline {
     width: 0%;
     height: 2px;
     background: var(--heading-color);
@@ -939,7 +939,7 @@ header {
     }
 }
 
-.drawlineFooter {
+.scrolled.drawlineFooter {
     width: 0%;
     height: 2px;
     background: var(--heading-color);
@@ -981,8 +981,8 @@ footer {
     }
     .validator {
         border: 0;
-        width: 71px;
-        height: 22px;
+        width: 88px;
+        height: 31px;
     }
     .copyright {
         border-left: 1px solid var(--font-color);

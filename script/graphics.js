@@ -172,55 +172,96 @@ window.addEventListener('scroll', scrollLanguageBlinding, {
 });
 
 // draw lines
-function scrollDrawLines() {
-    var elements = document.querySelectorAll('.line'),
-        positions = [];
+// function scrollDrawLines() {
+//     var elements = document.querySelectorAll('.line'),
+//         positions = [];
 
-    Array.prototype.forEach.call(elements, function(el) {
-        var positionInfo = el.getBoundingClientRect();
-        var appearPosition = positionInfo.top;
+//     Array.prototype.forEach.call(elements, function(el) {
+//         var positionInfo = el.getBoundingClientRect();
+//         var appearPosition = positionInfo.top;
 
-        positions.push(appearPosition);
+//         positions.push(appearPosition);
 
-    });
+//     });
 
-    for (var i = 0; i < elements.length; i++) {
-        var screenPosition = window.innerHeight / 1.1;
+//     for (var i = 0; i < elements.length; i++) {
+//         var screenPosition = window.innerHeight / 1.1;
 
-        if (elements[i].getBoundingClientRect().top < screenPosition) {
-            elements[i].classList.add('drawline');
-        } else {
-            elements[i].classList.remove('drawline');
+//         if (elements[i].getBoundingClientRect().top < screenPosition) {
+//             elements[i].classList.add('drawline');
+//         } else {
+//             elements[i].classList.remove('drawline');
+//         }
+//     }
+// }
+// window.addEventListener('scroll', scrollDrawLines, {
+//     passive: true
+// });
+
+
+// function scrollDrawLinesFooter() {
+//     var elements = document.querySelectorAll('.line-footer'),
+//         positions = [];
+
+//     Array.prototype.forEach.call(elements, function(el) {
+//         var positionInfo = el.getBoundingClientRect();
+//         var appearPosition = positionInfo.top;
+
+//         positions.push(appearPosition);
+
+//     });
+
+//     for (var i = 0; i < elements.length; i++) {
+//         var screenPosition = window.innerHeight / 1.1;
+
+//         if (elements[i].getBoundingClientRect().top < screenPosition) {
+//             elements[i].classList.add('drawlineFooter');
+//         } else {
+//             elements[i].classList.remove('drawlineFooter');
+//         }
+//     }
+// }
+// window.addEventListener('scroll', scrollDrawLinesFooter, {
+//     passive: true
+// });
+
+////
+
+const scrollElements = document.querySelectorAll('.line');
+const elementInView = (el, dividend = 1) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    return (
+        elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+    );
+};
+
+const elementOutofView = (el) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    return (
+        elementTop > (window.innerHeight || document.documentElement.clientHeight)
+    );
+};
+
+const displayScrollElement = (element) => {
+    element.classList.add('scrolled');
+};
+
+const hideScrollElement = (element) => {
+    element.classList.remove('scrolled');
+};
+
+const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+            displayScrollElement(el);
+        } else if (elementOutofView(el)) {
+            hideScrollElement(el)
         }
-    }
+    })
 }
-window.addEventListener('scroll', scrollDrawLines, {
-    passive: true
-});
 
-
-function scrollDrawLinesFooter() {
-    var elements = document.querySelectorAll('.line-footer'),
-        positions = [];
-
-    Array.prototype.forEach.call(elements, function(el) {
-        var positionInfo = el.getBoundingClientRect();
-        var appearPosition = positionInfo.top;
-
-        positions.push(appearPosition);
-
-    });
-
-    for (var i = 0; i < elements.length; i++) {
-        var screenPosition = window.innerHeight / 1.1;
-
-        if (elements[i].getBoundingClientRect().top < screenPosition) {
-            elements[i].classList.add('drawlineFooter');
-        } else {
-            elements[i].classList.remove('drawlineFooter');
-        }
-    }
-}
-window.addEventListener('scroll', scrollDrawLinesFooter, {
-    passive: true
+window.addEventListener('scroll', () => {
+    handleScrollAnimation();
 });
