@@ -560,30 +560,28 @@ header {
 /*** skills ***/
 
 //graphics scroll effects  
-.graphic-up {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw 3s ease-in-out forwards;
-    stroke: #0900ff;
-    stroke-width: 8px;
-    stroke-linecap: round;
-    fill: none;
-    /* display: none; */
-}
-
-.graphic-left {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw 3s ease-in-out forwards;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    stroke: #0900ff;
-    stroke-width: 8px;
-    stroke-linecap: round;
-    fill: none;
-    /* display: none; */
-}
-
+// .graphic-up {
+//     stroke-dasharray: 500;
+//     stroke-dashoffset: 500;
+//     animation: draw 3s ease-in-out forwards;
+//     stroke: #0900ff;
+//     stroke-width: 8px;
+//     stroke-linecap: round;
+//     fill: none;
+//     /* display: none; */
+// }
+// .graphic-left {
+//     stroke-dasharray: 500;
+//     stroke-dashoffset: 500;
+//     animation: draw 3s ease-in-out forwards;
+//     -webkit-animation-delay: 1s;
+//     animation-delay: 1s;
+//     stroke: #0900ff;
+//     stroke-width: 8px;
+//     stroke-linecap: round;
+//     fill: none;
+//     /* display: none; */
+// }
 .invisible {
     opacity: 0;
 }
@@ -597,40 +595,38 @@ header {
     }
 }
 
-@keyframes languageEffect {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    25% {
-        transform: scale(1);
-        opacity: 1;
-        color: #0900ff;
-    }
-    50% {
-        transform: scale(0.6);
-        opacity: 0;
-    }
-    75% {
-        transform: scale(0.8);
-        opacity: 1;
-        color: #0900ff;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.languageAppear {
-    color: var(--heading-color-2);
-    position: relative;
-    top: 112px;
-    right: 24%;
-    font-size: 2rem;
-    animation: languageEffect 1.5s forwards ease-out;
-}
-
+// @keyframes languageEffect {
+//     0% {
+//         transform: scale(0.8);
+//         opacity: 0;
+//     }
+//     25% {
+//         transform: scale(1);
+//         opacity: 1;
+//         color: #0900ff;
+//     }
+//     50% {
+//         transform: scale(0.6);
+//         opacity: 0;
+//     }
+//     75% {
+//         transform: scale(0.8);
+//         opacity: 1;
+//         color: #0900ff;
+//     }
+//     100% {
+//         transform: scale(1);
+//         opacity: 1;
+//     }
+// }
+// .languageAppear {
+//     color: var(--heading-color-2);
+//     position: relative;
+//     top: 112px;
+//     right: 24%;
+//     font-size: 2rem;
+//     animation: languageEffect 1.5s forwards ease-out;
+// }
 .scrolled.drawline {
     width: 0%;
     height: 2px;
@@ -723,16 +719,27 @@ header {
                 .language {
                     color: var(--heading-color-2);
                     position: relative;
-                    top: 112px;
-                    right: 22%;
-                    font-size: 2rem;
+                    top: 188px;
+                    right: 18%;
+                    font-size: 2.2rem;
                 }
                 .percent {
                     position: relative;
+                    color: #0900ff;
+                    font-size: 4.5rem;
+                    top: 206px;
+                    left: 14%;
+                }
+                .days-of {
+                    position: relative;
                     color: var(--heading-color-2);
                     font-size: 2rem;
-                    bottom: 122px;
-                    left: 27%;
+                    bottom: 116px;
+                    right: 2%;
+                    p:last-child {
+                        margin-top: 2px;
+                        margin-left: 55px;
+                    }
                 }
             }
         }
@@ -757,16 +764,27 @@ header {
                 .language {
                     color: var(--heading-color-2);
                     position: relative;
-                    top: 112px;
+                    top: 188px;
                     right: 22%;
-                    font-size: 2rem;
+                    font-size: 2.2rem;
                 }
                 .percent {
                     position: relative;
+                    color: #0900ff;
+                    font-size: 4.5rem;
+                    top: 206px;
+                    left: 17%;
+                }
+                .days-of {
+                    position: relative;
                     color: var(--heading-color-2);
                     font-size: 2rem;
-                    bottom: 122px;
-                    left: 27%;
+                    bottom: 116px;
+                    right: 2%;
+                    p:last-child {
+                        margin-top: 2px;
+                        margin-left: 55px;
+                    }
                 }
             }
         }
@@ -791,16 +809,27 @@ header {
                 .language {
                     color: var(--heading-color-2);
                     position: relative;
-                    top: 112px;
-                    right: 24%;
-                    font-size: 2rem;
+                    top: 188px;
+                    right: 7%;
+                    font-size: 2.2rem;
                 }
                 .percent {
                     position: relative;
+                    color: #0900ff;
+                    font-size: 4.5rem;
+                    top: 206px;
+                    left: 17%;
+                }
+                .days-of {
+                    position: relative;
                     color: var(--heading-color-2);
                     font-size: 2rem;
-                    bottom: 122px;
-                    left: 27%;
+                    bottom: 116px;
+                    right: 2%;
+                    p:last-child {
+                        margin-top: 2px;
+                        margin-left: 55px;
+                    }
                 }
             }
         }
@@ -821,17 +850,32 @@ header {
                     @include flex(center, center);
                 }
                 i {
+                    display: flex;
+                    justify-content: center;
+                    flex: 0 0 10%;
                     margin: 20px;
+                    @media (max-width: 1280px) {
+                        flex: 0 0 15%;
+                    }
                     @media (max-width: 768px) {
-                        flex: 0 0 20%;
+                        flex: 0 0 25%;
                     }
                 }
                 .svgs {
+                    display: flex;
+                    justify-content: center;
+                    flex: 0 0 10%;
                     margin: 20px;
-                }
-                svg {
-                    width: 58px;
-                    fill: var(--heading-color-2);
+                    @media (max-width: 1280px) {
+                        flex: 0 0 15%;
+                    }
+                    @media (max-width: 768px) {
+                        flex: 0 0 25%;
+                    }
+                    svg {
+                        width: 60px;
+                        fill: var(--heading-color-2);
+                    }
                 }
             }
         }
