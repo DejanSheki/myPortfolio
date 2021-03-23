@@ -105,8 +105,8 @@ function dateDiff(start) {
     var dayStart = new Date(start);
     var dayEnd = new Date();
     var totalDays = (dayEnd - dayStart) / (1000 * 60 * 60 * 24);
+    var days = Math.ceil(totalDays);
 
-    const days = Math.round(totalDays)
     return days;
 }
 

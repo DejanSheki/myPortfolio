@@ -27,6 +27,7 @@
 html {
   scroll-padding-top: 140px;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -594,10 +595,6 @@ header h2 {
 }
 
 /*** skills ***/
-.invisible {
-  opacity: 0;
-}
-
 @keyframes draw {
   0% {
     stroke-dashoffset: 500;
@@ -699,23 +696,11 @@ header h2 {
   flex-wrap: wrap;
   flex-direction: column;
 }
-@media (min-width: 1700px) {
-  .skills .container article:nth-child(1) .graphic svg {
-    width: 440px;
-    height: 440px;
-  }
-}
-@media (min-width: 2700px) {
-  .skills .container article:nth-child(1) .graphic svg {
-    width: 635px;
-    height: 635px;
-  }
-}
 .skills .container article:nth-child(1) .graphic .language {
   color: var(--heading-color-2);
   position: relative;
   top: 188px;
-  right: 18%;
+  right: 62px;
   font-size: 2.2rem;
 }
 .skills .container article:nth-child(1) .graphic .percent {
@@ -723,7 +708,7 @@ header h2 {
   color: #0900ff;
   font-size: 4.5rem;
   top: 206px;
-  left: 14%;
+  left: 53px;
 }
 .skills .container article:nth-child(1) .graphic .days-of {
   position: relative;
@@ -746,23 +731,11 @@ header h2 {
   flex-wrap: wrap;
   flex-direction: column;
 }
-@media (min-width: 1700px) {
-  .skills .container article:nth-child(2) .graphic svg {
-    width: 440px;
-    height: 440px;
-  }
-}
-@media (min-width: 2700px) {
-  .skills .container article:nth-child(2) .graphic svg {
-    width: 635px;
-    height: 635px;
-  }
-}
 .skills .container article:nth-child(2) .graphic .language {
   color: var(--heading-color-2);
   position: relative;
   top: 188px;
-  right: 22%;
+  right: 79px;
   font-size: 2.2rem;
 }
 .skills .container article:nth-child(2) .graphic .percent {
@@ -770,7 +743,7 @@ header h2 {
   color: #0900ff;
   font-size: 4.5rem;
   top: 206px;
-  left: 17%;
+  left: 41px;
 }
 .skills .container article:nth-child(2) .graphic .days-of {
   position: relative;
@@ -793,23 +766,11 @@ header h2 {
   flex-wrap: wrap;
   flex-direction: column;
 }
-@media (min-width: 1700px) {
-  .skills .container article:nth-child(3) .graphic svg {
-    width: 440px;
-    height: 440px;
-  }
-}
-@media (min-width: 2700px) {
-  .skills .container article:nth-child(3) .graphic svg {
-    width: 635px;
-    height: 635px;
-  }
-}
 .skills .container article:nth-child(3) .graphic .language {
   color: var(--heading-color-2);
   position: relative;
   top: 188px;
-  right: 7%;
+  right: 22px;
   font-size: 2.2rem;
 }
 .skills .container article:nth-child(3) .graphic .percent {
@@ -817,7 +778,7 @@ header h2 {
   color: #0900ff;
   font-size: 4.5rem;
   top: 206px;
-  left: 17%;
+  left: 54px;
 }
 .skills .container article:nth-child(3) .graphic .days-of {
   position: relative;

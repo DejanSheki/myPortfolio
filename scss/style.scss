@@ -45,6 +45,7 @@ $align) {
 html {
     scroll-padding-top: 140px;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -582,10 +583,9 @@ header {
 //     fill: none;
 //     /* display: none; */
 // }
-.invisible {
-    opacity: 0;
-}
-
+// .invisible {
+//     opacity: 0;
+// }
 @keyframes draw {
     0% {
         stroke-dashoffset: 500;
@@ -706,21 +706,11 @@ header {
                 justify-content: center;
                 flex-wrap: wrap;
                 flex-direction: column;
-                svg {
-                    @media (min-width: 1700px) {
-                        width: 440px;
-                        height: 440px;
-                    }
-                    @media (min-width: 2700px) {
-                        width: 635px;
-                        height: 635px;
-                    }
-                }
                 .language {
                     color: var(--heading-color-2);
                     position: relative;
                     top: 188px;
-                    right: 18%;
+                    right: 62px;
                     font-size: 2.2rem;
                 }
                 .percent {
@@ -728,7 +718,7 @@ header {
                     color: #0900ff;
                     font-size: 4.5rem;
                     top: 206px;
-                    left: 14%;
+                    left: 53px;
                 }
                 .days-of {
                     position: relative;
@@ -751,21 +741,11 @@ header {
                 justify-content: center;
                 flex-wrap: wrap;
                 flex-direction: column;
-                svg {
-                    @media (min-width: 1700px) {
-                        width: 440px;
-                        height: 440px;
-                    }
-                    @media (min-width: 2700px) {
-                        width: 635px;
-                        height: 635px;
-                    }
-                }
                 .language {
                     color: var(--heading-color-2);
                     position: relative;
                     top: 188px;
-                    right: 22%;
+                    right: 79px;
                     font-size: 2.2rem;
                 }
                 .percent {
@@ -773,7 +753,7 @@ header {
                     color: #0900ff;
                     font-size: 4.5rem;
                     top: 206px;
-                    left: 17%;
+                    left: 41px;
                 }
                 .days-of {
                     position: relative;
@@ -796,21 +776,11 @@ header {
                 justify-content: center;
                 flex-wrap: wrap;
                 flex-direction: column;
-                svg {
-                    @media (min-width: 1700px) {
-                        width: 440px;
-                        height: 440px;
-                    }
-                    @media (min-width: 2700px) {
-                        width: 635px;
-                        height: 635px;
-                    }
-                }
                 .language {
                     color: var(--heading-color-2);
                     position: relative;
                     top: 188px;
-                    right: 7%;
+                    right: 22px;
                     font-size: 2.2rem;
                 }
                 .percent {
@@ -818,7 +788,7 @@ header {
                     color: #0900ff;
                     font-size: 4.5rem;
                     top: 206px;
-                    left: 17%;
+                    left: 54px;
                 }
                 .days-of {
                     position: relative;

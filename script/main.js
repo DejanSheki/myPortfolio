@@ -14,7 +14,7 @@ window.onload = function loadFrame() {
         wlctxd.classList.add("welcome-text-d-add");
         wlctxd.classList.remove("welcome-text-d-trans");
 
-    }, 4000);
+    }, 2000);
 };
 
 //hamburger
