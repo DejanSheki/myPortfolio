@@ -60,8 +60,9 @@
 //scroll heading jump
 
 function scrollJumpAppear() {
-    var elements = document.querySelectorAll('.jump'),
-        positions = [];
+    var elements = document.querySelectorAll('.jump');
+    var positions = [];
+    var screenPosition = window.innerHeight / 1.1;
 
     Array.prototype.forEach.call(elements, function(el) {
         var positionInfo = el.getBoundingClientRect();
@@ -71,15 +72,22 @@ function scrollJumpAppear() {
 
     });
 
-    for (var i = 0; i < elements.length; i++) {
-        var screenPosition = window.innerHeight / 1.1;
-
-        if (elements[i].getBoundingClientRect().top < screenPosition) {
-            elements[i].classList.add('jump-appear');
+    elements.forEach(element => {
+        if (element.getBoundingClientRect().top < screenPosition) {
+            element.classList.add('jump-appear');
         } else {
-            elements[i].classList.remove('jump-appear');
+            element.classList.remove('jump-appear');
         }
-    }
+    });
+    // for (var i = 0; i < elements.length; i++) {
+    //     var screenPosition = window.innerHeight / 1.1;
+
+    //     if (elements[i].getBoundingClientRect().top < screenPosition) {
+    //         elements[i].classList.add('jump-appear');
+    //     } else {
+    //         elements[i].classList.remove('jump-appear');
+    //     }
+    // }
 }
 window.addEventListener('scroll', scrollJumpAppear, {
     passive: true
