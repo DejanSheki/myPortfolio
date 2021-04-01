@@ -545,6 +545,9 @@ header h2 {
   fill: #0073FF;
   margin-left: 5px;
 }
+.projects .container article .icons .svgs {
+  margin: 5px 0 0 5px;
+}
 .projects .container article h3 {
   font-size: 1.7rem;
   color: var(--heading-color-2);
