@@ -520,9 +520,22 @@ header h2 {
     padding: 15px;
   }
 }
-.projects .container article img {
-  width: 100%;
+.projects .container article .img-box {
   border: 3px solid #060c0f;
+  overflow: hidden;
+  transition: all 2s ease;
+}
+.projects .container article .img-box:hover {
+  border: 3px solid #0073FF;
+}
+.projects .container article .img-box img {
+  width: 100%;
+  display: block;
+  transition: 1s ease;
+  cursor: pointer;
+}
+.projects .container article .img-box img:hover {
+  transform: scale(1.1);
 }
 .projects .container article .icons {
   display: flex;

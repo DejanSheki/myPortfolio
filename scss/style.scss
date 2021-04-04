@@ -482,9 +482,22 @@ header {
             @media (max-width: 480px) {
                 padding: 15px;
             }
-            img {
-                width: 100%;
+            .img-box {
                 border: 3px solid $darkBlue;
+                overflow: hidden;
+                transition: all 2s ease;
+                &:hover {
+                    border: 3px solid $blueSecondary;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                    transition: $transition;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
             .icons {
                 @include flex(flex-start,
