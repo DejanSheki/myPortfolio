@@ -1,12 +1,12 @@
 // preload
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const preload = document.querySelector(".preload");
     preload.classList.add("preload-finish");
 
 });
 window.onload = function loadFrame() {
-    setTimeout(function() {
+    setTimeout(function () {
         const wlctx = document.querySelector(".welcome-text");
         const wlctxd = document.querySelector(".welcome-text-d");
         wlctx.classList.add("welcome-text-add");
@@ -23,7 +23,7 @@ const bars = document.querySelector('.bars');
 const menu = document.querySelector('.menu');
 const menuA = document.querySelectorAll('.menu a');
 
-bars.addEventListener('click', function() {
+bars.addEventListener('click', function () {
     if (bars.classList.contains('bars-open') === false) {
         bars.classList.add('bars-open');
         menu.classList.add('menu-open');
@@ -34,7 +34,7 @@ bars.addEventListener('click', function() {
 });
 
 for (var i = 0; i < menuA.length; i++) {
-    menuA[i].addEventListener('click', function() {
+    menuA[i].addEventListener('click', function () {
 
         if (bars.classList.contains('bars-open') && menu.classList.contains('menu-open')) {
             bars.classList.remove('bars-open');
@@ -71,7 +71,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 /* sticky nav */
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const windowPos = document.querySelector('html').scrollTop;
     const navbar = document.querySelector('.sticky');
     const navbarTopPos = navbar.getBoundingClientRect().top;
@@ -109,7 +109,7 @@ const btnText2 = document.getElementById('myBtn2');
 const hidenContainer2 = document.querySelector('.hiden-container');
 
 // show morw/less sr
-document.getElementById('myBtn2').addEventListener('click', function() {
+document.getElementById('myBtn2').addEventListener('click', function () {
 
     if (btnText2.innerText === 'Još projekata ') {
 
